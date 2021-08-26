@@ -1,0 +1,160 @@
+/*---------- overall setting -----------*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+} 
+
+body {
+  font-family: 'Nunito', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*-------- Head -------- */
+.head {
+  width: 95vw;
+  margin: 15px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.head .title {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.title > img {
+  max-width: 3em;
+  margin-right: 10px;
+  vertical-align: center;
+  position: relative;
+  top: -5px;
+}
+
+.head #score {
+  padding: 10px 10px 5px 0;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: #6c90ac;
+}
+
+.head #count {
+  padding-right: 10px;
+  font-weight: 600;
+  color: #555555;
+}
+
+/*--------  Cards -------- */
+#cards-panel {
+  width: 95vw;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.card {
+  flex: 7% 1 1;
+  height: 9vw;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 2.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.card p {
+  margin: 10px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.card p:last-child {  /* css selector ~~ 重要！！ */
+  transform: rotate(180deg);
+}
+
+.card img {
+  width: 35%;
+  align-self: center; /* 重要！ */
+}
+
+.back {
+  background: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background-size: cover;
+}
+
+.paired {
+  background-color: #dae0e3
+}
+
+/*--- animation for match failed  */
+.wrong {
+  animation-name: wrongAnimation;
+  animation-duration: 0.3s;
+  animation-iteration-count: 4;
+}
+
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid #ffd54f;
+  }
+}
+
+/*---------- complete announcement ---------*/
+.announcement-box {
+  position: fixed;
+  top: 38vh;
+  z-index: 50;
+  height: 25vh;
+  width: 100vw;
+  background-color: RGBA(232, 246, 254, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation-name: announceCompletion;
+  animation-duration: 1.2s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes announceCompletion {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.announcement-box > h2 {
+  font-size: 2.5em;
+  margin: 5px;
+  color: #3c6e88;
+  font-weight: 600;
+}
+
+.announcement-box > h5 {
+  font-size: 1em;
+  letter-spacing: 1px;
+}

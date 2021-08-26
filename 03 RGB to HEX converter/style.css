@@ -1,0 +1,118 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+	max-height: 1000px;
+	color: #222222;
+}
+
+* {
+	box-sizing: border-box;
+	cursor: default;
+}
+
+.container {
+	height: 100%;
+	background-color: #1e1e1e;
+	display: flex;
+	align-items: center;
+}
+
+.converter {
+	padding: 60px 0;
+	width:100%;
+	background-color: #f7fc8b;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.color-codes {
+	display: flex;
+	margin: 15px;
+}
+
+/****** 左側色碼標題 R G B ******/
+.parameters {
+	margin: 0 15px;
+	padding: 6px 14px;
+	border-radius: 5px;
+	font-size: 35px;
+}
+
+#parameter-R {
+	background-color: #FE0000;
+	color: #fdfdfd;
+}
+
+#parameter-G {
+	background-color: #08FF00;
+}
+
+#parameter-B {
+	background-color: #1802FF;
+	color: #fdfdfd;
+}
+
+/****** sliders ******/
+.sliders{
+	margin: 0 15px;
+	width: 200px;
+	cursor: grab;
+}
+
+/******* 右側 input box *******/
+.input-boxes {
+	margin: 0 15px;
+	border: none;
+	border-radius: 5px;
+	width: 90px;
+	font-size: 30px;
+	text-align: center;
+	cursor: text;
+}
+
+#input-box-R {
+	background-color: #FE0000;
+	color: #fdfdfd;
+}
+
+#input-box-R::placeholder{
+	color: #fdfdfd;
+}
+
+#input-box-G {
+	background-color: #08FF00;
+	color: #222222;
+}
+
+#input-box-G::placeholder{
+	color: #222222;
+}
+
+#input-box-B {
+	background-color: #1802FF;
+	color: #fdfdfd;
+}
+
+#input-box-B::placeholder {
+	color: #fdfdfd;
+}
+
+/***** hex-value *****/
+.hex-info {
+	margin-top:  15px;
+	border-radius: 5px;
+	width: 400px;
+	background-color: rgba(255,255,255,0.6);
+	font-size: 35px;
+	letter-spacing: 1.5px;
+	display: flex;
+	justify-content: center;
+}
+
+.hex-info > span {
+	margin: 10px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>RGB to HEX converter</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="converter">
+      <div class="color-codes">
+        <div class="parameters" id="parameter-R">R</div>
+        <input type="range" class="sliders" id="slider-R" min="0" max="255" value="247">
+        <input type="text" class="input-boxes" id="input-box-R" placeholder="247">
+      </div>
+      <div class="color-codes">
+        <div class="parameters" id="parameter-G">G</div>
+        <input type="range" class="sliders" id="slider-G" min="0" max="255" value="252">
+        <input type="text" class="input-boxes" id="input-box-G" placeholder="252">
+      </div>
+      <div class="color-codes">
+        <div class="parameters" id="parameter-B">B</div>
+        <input type="range" class="sliders" id="slider-B" min="0" max="255" value="139">
+        <input type="text" class="input-boxes" id="input-box-B" placeholder="139">
+      </div>
+
+      <div class="hex-info">
+        <span> HEX: </span>
+        <span id="hex-value"> #f7fc8b </span>
+      </div>
+
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
